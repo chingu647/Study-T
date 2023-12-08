@@ -19,7 +19,7 @@ emp0, tail0, emp1 = st.columns( [0.1, 1.0, 0.1] )
 
 # 데이터 확인 
 df0 = pd.read_csv("data/iris.csv") 
-st.dataframe(df0.columns)
+con10.dataframe(df0.columns)
 
 # 옵션 설정 
 
