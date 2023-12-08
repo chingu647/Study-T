@@ -16,7 +16,8 @@ st.markdown("""---""")
 emp0, head0, emp1 = st.columns( [0.1, 1.0, 0.1] )
 emp0, con10, emp1 = st.columns( [0.1, 1.0, 0.1] )
 emp0, tail0, emp1 = st.columns( [0.1, 1.0, 0.1] ) 
-sbar = st.sidebar
+sbar = st.sidebar 
+
 # 데이터 확인 
 df0 = pd.read_csv("data/iris.csv") 
 sr_variety = df0.variety 
@@ -29,6 +30,6 @@ my_select = list(sr_variety)
 choice = sbar.selectbox('확인하고 싶은 종을 선택하세요', my_select) 
 
 tmp_df = df0[df0.variety == choice]
-sbar.dataframe(tmp_df) 
+con10.dataframe(tmp_df) 
 
 
