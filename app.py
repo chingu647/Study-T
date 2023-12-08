@@ -24,7 +24,7 @@ sbar = st.sidebar
 
 # 데이터 확인 
 df0 = pd.read_csv("data/iris.csv") 
-df0.columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
+df0.columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'variety']
 sr_variety = df0.variety.unique()
 
 # 사이드 바 ================================================
