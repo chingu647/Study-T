@@ -46,10 +46,10 @@ slider_range = sbar.slider('choose range key column', 0.0, 10.0, (2.5, 7.5) )
 # 버튼 
 start_button = sbar.button('filter apply 📊') 
 if start_button: 
-    temp_df2 = df0[df0.variety.isin(m_choice)]
-    temp_df2 = temp_df2[ ( temp_df2[state] >= slider_range[0] ) & ( temp_df2[state] <= slider_range[1]) ] 
+    temp_df1 = df0[df0.variety.isin(m_choice)]
+    temp_df1 = temp_df1[ ( temp_df2[state] >= slider_range[0] ) & ( temp_df1[state] <= slider_range[1]) ] 
 
-    con10.dataframe(temp_df2) 
+    con10.dataframe(temp_df1) 
 
 
 
