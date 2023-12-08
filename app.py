@@ -71,3 +71,18 @@ fig = px.scatter( df0.query("sepal_length >= 4.0" ),
 fig.show() 
 con11.plotly_chart(fig, theme="streamlit") #, use_container_width=True) 
 
+
+# 지도 
+base_position = [37.5073423, 127.0572734] 
+map_data = pd.DataFrame(np.random.randn(5,1)/[20,20] + base_position,
+	columns=['lat','lon'] 
+	) 
+#print(map_data) 
+con11.map(map_data) 
+
+
+
+
+
+
+
