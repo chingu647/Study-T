@@ -20,7 +20,7 @@ sbar = st.sidebar
 
 # 데이터 확인 
 df0 = pd.read_csv("data/iris.csv") 
-sr_variety = df0.variety.unique().sort()
+sr_variety = df0.variety.unique()
 
 # 옵션 설정 
 sbar.title('Iris Species🌸') 
