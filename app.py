@@ -1,4 +1,5 @@
 import streamlit as st 
+import plotly.express as px 
 
 import pandas as pd 
 import numpy as np 
@@ -9,7 +10,7 @@ from datetime import datetime
 from collections import Counter 
 
 from PIL import Image 
-import plotly.express as px 
+
 
 st.set_page_config(layout="wide")
 
@@ -60,13 +61,14 @@ if start_button:
     sbar.balloons() 
 
 # 그래프 
-#fig = px.scatter( df0, #.query(f"sepal_length >= 4.0" ),
-#	x='sepal_length',
-#	y='sepal_width',
-#	size='pop', 
-#	color='continent', 
-#	log_x=True, 
-#	size_max=60 ) 
-#fig.show() 
+fig = px.scatter( df0.query("sepal_length >= 4.0" ),
+	x='sepal_length',
+	y='sepal_width',
+	size='pop', 
+	color='continent', 
+	log_x=True, 
+	size_max=60,
+) 
+fig.show() 
 
 
