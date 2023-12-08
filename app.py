@@ -59,10 +59,9 @@ start_button = sbar.button('filter apply 📊')
 if start_button: 
 	temp_df2 = df0[df0.variety.isin(m_choice)]
 	temp_df2 = temp_df2[ ( temp_df2[state] >= slider_range[0] ) & ( temp_df2[state] <= slider_range[1]) ] 
-	temp_df1 = temp_df2 
 	
 	flag0 = False 
-	con10.dataframe(temp_df1) 
+	con10.dataframe(temp_df2) 
 	sbar.success('Filter Applied') 
 	sbar.balloons() 
 
