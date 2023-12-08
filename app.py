@@ -84,7 +84,7 @@ con11.map(map_data)
 
 
 # 프로그레스 바
-latest_iteration = st.empty() 
+latest_iteration = head0.empty() 
 bar = head0.progress(0) 
 
 for i in range(100):
