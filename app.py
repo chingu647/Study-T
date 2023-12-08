@@ -19,8 +19,16 @@ emp0, tail0, emp1 = st.columns( [0.1, 1.0, 0.1] )
 
 # 데이터 확인 
 df0 = pd.read_csv("data/iris.csv") 
-con10.dataframe(df0.columns)
+sr_variety = df0.variety 
 
 # 옵션 설정 
+st.sidebar.title('Iris Species🌸') 
+
+# 셀렉트 박스 
+my_select = list(sr_variety) 
+choice = st.selectbox('확인하고 싶은 종을 선택하세요', my_select) 
+
+tmp_df = df0[df0.variety == choice]
+con10.dataframe(tmp_df) 
 
 
