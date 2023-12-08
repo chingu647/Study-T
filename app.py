@@ -60,7 +60,7 @@ if start_button:
     sbar.balloons() 
 
 # 그래프 
-fig = px.scatter( df0.query(f"sepal_length >= 4.0" ),
+fig = px.scatter( df0, #.query(f"sepal_length >= 4.0" ),
 	x='sepal_length',
 	y='sepal_width',
 #	size='pop', 
