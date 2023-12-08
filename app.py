@@ -51,7 +51,7 @@ if start_button:
     temp_df1 = temp_df1[ ( temp_df1[state] >= slider_range[0] ) & ( temp_df1[state] <= slider_range[1]) ] 
 
     con10.table(temp_df1) 
-    sbar.succedd('Filter Applied') 
+    sbar.succeed('Filter Applied') 
     sbar.balloons() 
 
 
