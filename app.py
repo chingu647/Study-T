@@ -64,10 +64,9 @@ if start_button:
 fig = px.scatter( df0.query("sepal_length >= 4.0" ),
 	x='sepal_length',
 	y='sepal_width',
-	size='pop', 
-	color='continent', 
-	log_x=True, 
-	size_max=60,
+	size='sepal_width', 
+	color='variety', 
+	hover_data =['sepal_width'],
 ) 
 fig.show() 
 
