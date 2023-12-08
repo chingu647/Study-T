@@ -26,7 +26,7 @@ st.sidebar.title('Iris Species🌸')
 
 # 셀렉트 박스 
 my_select = list(sr_variety) 
-choice = st.selectbox('확인하고 싶은 종을 선택하세요', my_select) 
+choice = con10.selectbox('확인하고 싶은 종을 선택하세요', my_select) 
 
 tmp_df = df0[df0.variety == choice]
 con10.dataframe(tmp_df) 
