@@ -1,14 +1,15 @@
 import streamlit as st 
-import plotly.express as px 
 
 import pandas as pd 
 import numpy as np 
+import numpy.pyplot as plt 
 import time 
 import os 
 from datetime import datetime 
 from collections import Counter 
 
 from PIL import Image 
+import plotly.express as px 
 
 st.set_page_config(layout="wide")
 
