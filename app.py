@@ -24,6 +24,7 @@ sbar = st.sidebar
 
 # 데이터 확인 
 df0 = pd.read_csv("data/iris.csv") 
+df0.columns = ['sepal_length', 'sepal_width', 'petal_length', petal_width']
 sr_variety = df0.variety.unique()
 
 # 사이드 바 ================================================
@@ -59,9 +60,9 @@ if start_button:
     sbar.balloons() 
 
 # 그래프 
-fig = px.scatter( df0.query(f"sepal.length >= 4.0" ),
-	x='sepal.length',
-	y='sepal.width',
+fig = px.scatter( df0.query(f"sepal_length >= 4.0" ),
+	x='sepal_length',
+	y='sepal_width',
 	size='pop', 
 	color='continent', 
 	log_x=True, 
