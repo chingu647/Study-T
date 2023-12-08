@@ -34,7 +34,7 @@ con10.dataframe(tmp_df)
 
 # 멀티셀렉트 
 my_mselect = list(sr_variety) 
-mchoice = sbar.multiselect('확인하고 싶은 종을 선택하세요. (복수선택 가능)', my_mselect) 
+mchoice = sbar.multiselect('확인하고 싶은 종은? (복수선택 가능)', my_mselect) 
 temp_df1 = df0[df0.variety.isin(my_mselect)]
 con10.dataframe(tmp_df1) 
 
