@@ -36,7 +36,7 @@ sbar.title('Iris Species🌸')
 my_mselect = list(sr_variety) 
 m_choice = sbar.multiselect('확인하고 싶은 종은? (복수선택 가능)', my_mselect) 
 temp_df1 = df0[df0.variety.isin(m_choice)] 
-if temp_df1: 
+if temp_df1 != '': 
     con10.dataframe(temp_df1) 
 
 # 라디오  
