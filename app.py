@@ -13,7 +13,7 @@ import plotly.express as px
 
 st.set_page_config(layout="wide")
 
-st.markdown("#### Hello~~ Good Luck ^^ !!!")pip matplot
+st.markdown("#### Hello~~ Good Luck ^^ !!!")
 st.markdown("""---""") 
 
 # 컬럼 구성 
