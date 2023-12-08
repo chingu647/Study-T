@@ -74,26 +74,24 @@ con11.plotly_chart(fig, theme="streamlit") #, use_container_width=True)
 
 
 # 지도 
-with con11: 
-	base_position = [37.5073423, 127.0572734] 
-	map_data = pd.DataFrame(np.random.randn(5,1)/[20,20] + base_position,
-		columns=['lat','lon'] 
-		) 
-	#print(map_data) 
-	con11.code('con11.map(map_data)')
-	con11.map(map_data) 
+base_position = [37.5073423, 127.0572734] 
+map_data = pd.DataFrame(np.random.randn(5,1)/[20,20] + base_position,
+	columns=['lat','lon'] 
+	) 
+#print(map_data) 
+con11.code('con11.map(map_data)')
+con11.map(map_data) 
 
 
 # 프로그레스 바
 latest_iteration = st.empty() 
-bar = st.progress(0) 
+bar = head0.progress(0) 
 
-with head0: 
-	for i in range(100):
-		latest_iteration.text(f"Iteration {i+1}")
-		bar.progress(i+1)
-		time.sleep(0.05) 
-	st.balloons() 
+for i in range(100):
+	latest_iteration.text(f"Iteration {i+1}")
+	bar.progress(i+1)
+	time.sleep(0.05) 
+st.balloons() 
 
 
 
