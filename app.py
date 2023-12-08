@@ -9,7 +9,7 @@ from PIL import Image
 
 st.set_page_config(layout="wide")
 
-st.markdown("#### Hello~~ Good Luck !!!")
+st.markdown("#### Hello~~ Good Luck ^^ !!!")
 st.markdown("""---""") 
 
 # 컬럼 구성 
