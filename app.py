@@ -69,5 +69,5 @@ fig = px.scatter( df0.query("sepal_length >= 4.0" ),
 	hover_data =['sepal_width'],
 ) 
 fig.show() 
-
+con11.plotly_chart(fig, theme="streamlit", use_container_width=True) 
 
