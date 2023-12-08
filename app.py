@@ -83,7 +83,15 @@ con11.code('con11.map(map_data)')
 con11.map(map_data) 
 
 
+# 프로그레스 바
+latest_iteration = st.empty() 
+bar = st.progress(0) 
 
+for i in rnag(100):
+	latest_iteration.text(f"Iteration {i+1}")
+	bar.progress(i+1)
+	time.sleep(0.05) 
+st.balloons() 
 
 
 
