@@ -63,7 +63,7 @@ if start_button:
 fig = px.scatter( df0.query(f"sepal_length >= 4.0" ),
 	x='sepal_length',
 	y='sepal_width',
-	size='pop', 
+#	size='pop', 
 	color='continent', 
 	log_x=True, 
 	size_max=60 ) 
