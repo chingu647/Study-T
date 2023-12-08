@@ -39,7 +39,7 @@ con10.dataframe(temp_df)
 #con10.dataframe(temp_df1) 
 
 # 라디오  
-my_rselect = list(df.columns) 
+my_rselect = list(df0.columns) 
 r_choice = sbar.radio("what is key column ?", my_rselect, horizontal=True) 
 
 # 슬라이더 
