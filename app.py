@@ -2,7 +2,7 @@ import streamlit as st
 
 import pandas as pd 
 import numpy as np 
-import numpy.pyplot as plt 
+import matplotlib.pyplot as plt 
 import time 
 import os 
 from datetime import datetime 
