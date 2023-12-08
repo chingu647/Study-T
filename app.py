@@ -44,7 +44,7 @@ m_choice = sbar.multiselect('확인하고 싶은 종은? (복수선택 가능)',
 temp_df1 = df0[df0.variety.isin(m_choice)] 
 
 flag0 = True
-if m_choice != '' and flag0==True: 
+if m_choice != None & flag0==True: 
 	con10.dataframe(temp_df1) 
 
 # 라디오  
