@@ -67,6 +67,6 @@ fig = px.scatter( df0.query(f"sepal_length >= 4.0" ),
 	color='continent', 
 	log_x=True, 
 	size_max=60 ) 
-fig.show() 
+#fig.show() 
 
 
