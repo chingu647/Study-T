@@ -74,13 +74,14 @@ con11.plotly_chart(fig, theme="streamlit") #, use_container_width=True)
 
 
 # 지도 
-base_position = [37.5073423, 127.0572734] 
-map_data = pd.DataFrame(np.random.randn(5,1)/[20,20] + base_position,
-	columns=['lat','lon'] 
-	) 
-#print(map_data) 
-con11.code('con11.map(map_data)')
-con11.map(map_data) 
+with con10: 
+	base_position = [37.5073423, 127.0572734] 
+	map_data = pd.DataFrame(np.random.randn(5,1)/[20,20] + base_position,
+		columns=['lat','lon'] 
+		) 
+	#print(map_data) 
+	con11.code('con11.map(map_data)')
+	con11.map(map_data) 
 
 
 # 프로그레스 바
