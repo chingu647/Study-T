@@ -47,7 +47,7 @@ flag0 = True
 if m_choice and flag0==True: 
 	con10.dataframe(temp_df1) 
 else:
-	
+	pass
 
 # 라디오  
 my_rselect = list(df0.columns[:-1]) 
