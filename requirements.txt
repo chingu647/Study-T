@@ -5,6 +5,4 @@ time
 os 
 datetime
 collections
-
-PIL import
-plotly
+PIL
