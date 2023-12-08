@@ -49,7 +49,7 @@ if start_button:
     temp_df1 = df0[df0.variety.isin(m_choice)]
     temp_df1 = temp_df1[ ( temp_df1[state] >= slider_range[0] ) & ( temp_df1[state] <= slider_range[1]) ] 
 
-    con10.dataframe(temp_df1) 
+    con10.table(temp_df1) 
 
 
 
