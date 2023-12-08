@@ -34,9 +34,19 @@ con10.dataframe(temp_df)
 
 # 멀티셀렉트 
 #my_mselect = list(sr_variety) 
-#mchoice = sbar.multiselect('확인하고 싶은 종은? (복수선택 가능)', my_mselect) 
-#temp_df1 = df0[df0.variety.isin(mchoice)]
+#m_choice = sbar.multiselect('확인하고 싶은 종은? (복수선택 가능)', my_mselect) 
+#temp_df1 = df0[df0.variety.isin(m_choice)]
 #con10.dataframe(temp_df1) 
+
+# 라디오  
+my_rselect = list(df.columns) 
+r_choice = sbar.radio("what is key column ?", my_rselect, horizontal=True) 
+
+# 슬라이더 
+slider_range = sbar.slider('choose range key column', 0.0, 10.0, (2.5, 7.5) )
+
+# 버튼 
+start_button = sbar.button('filter apply 📊') 
 
 
 
