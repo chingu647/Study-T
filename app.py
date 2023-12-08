@@ -1,10 +1,13 @@
 import streamlit as st 
+import plotly.express as px 
+
 import pandas as pd 
 import numpy as np 
 import time 
 import os 
 from datetime import datetime 
 from collections import Counter 
+
 from PIL import Image 
 
 st.set_page_config(layout="wide")
@@ -14,7 +17,7 @@ st.markdown("""---""")
 
 # 컬럼 구성 
 emp0, head0, emp1 = st.columns( [0.1, 1.0, 0.1] )
-emp0, con10, emp1 = st.columns( [0.1, 1.0, 0.1] )
+emp0, con10, con11, emp1 = st.columns( [0.1, 0.5, 0.5, 0.1] )
 emp0, tail0, emp1 = st.columns( [0.1, 1.0, 0.1] ) 
 sbar = st.sidebar 
 
@@ -22,7 +25,7 @@ sbar = st.sidebar
 df0 = pd.read_csv("data/iris.csv") 
 sr_variety = df0.variety.unique()
 
-# 옵션 설정 
+# 사이드 바 ================================================
 sbar.title('Iris Species🌸') 
 
 # 셀렉트 박스 
@@ -54,6 +57,14 @@ if start_button:
     sbar.success('Filter Applied') 
     sbar.balloons() 
 
-
+# 그래프 
+fig = px.scatter( df.query(f"sepal.length >= 4.0),
+	x='sepal.length',
+	y='sepal.width',
+	size='pop', 
+	color='continent', 
+	log_x=True, 
+	size_max=60 ) 
+fig.show() 
 
 
