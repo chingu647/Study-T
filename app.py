@@ -59,7 +59,7 @@ if start_button:
 	temp_df2 = temp_df2[ ( temp_df2[state] >= slider_range[0] ) & ( temp_df2[state] <= slider_range[1]) ] 
 	temp_df1 = temp_df2 
 	
-	flag0 = Falae 
+	flag0 = False 
 	con10.dataframe(temp_df1) 
 	sbar.success('Filter Applied') 
 	sbar.balloons() 
@@ -87,14 +87,14 @@ con11.map(map_data)
 
 
 # 프로그레스 바
-latest_iteration = head0.empty() 
-bar = head0.progress(0) 
+#latest_iteration = head0.empty() 
+#bar = head0.progress(0) 
 
-for i in range(100):
-	latest_iteration.text(f"Iteration {i+1}")
-	bar.progress(i+1)
-	time.sleep(0.05) 
-head0.balloons() 
+#for i in range(100):
+#	latest_iteration.text(f"Iteration {i+1}")
+#	bar.progress(i+1)
+#	time.sleep(0.05) 
+#head0.balloons() 
 
 
 
