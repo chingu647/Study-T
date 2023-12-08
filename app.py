@@ -28,10 +28,6 @@ df0 = pd.read_csv("data/iris.csv")
 df0.columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'variety']
 sr_variety = df0.variety.unique() 
 
-if 'temp_df1' not in st.session_state:
-	st.session_state['temp_df1'] = temp_df1 
-
-
 # 사이드 바 ================================================
 sbar.title('Iris Species🌸') 
 
@@ -47,12 +43,12 @@ my_mselect = list(sr_variety)
 m_choice = sbar.multiselect('확인하고 싶은 종은? (복수선택 가능)', my_mselect) 
 temp_df1 = df0[df0.variety.isin(m_choice)] 
 
-del st.session_state['temp_df1'] 
+del temp_df1 
 
-st.session_state['temp_df1'] = temp_df1 
+temp_df1 = temp_df1 
 
 if not temp_df1.empty: 
-	con10.dataframe(st.session_state['temp_df1']) 
+	con10.dataframe(temp_df1) 
 
 # 라디오  
 my_rselect = list(df0.columns[:-1]) 
@@ -64,8 +60,8 @@ start_button = sbar.button('filter apply 📊')
 if start_button: 
 	temp_df2 = df0[df0.variety.isin(m_choice)]
 	temp_df2 = temp_df2[ ( temp_df2[state] >= slider_range[0] ) & ( temp_df2[state] <= slider_range[1]) ] 
-	st.session_state['temp_df1'] = temp_df2
-#	con10.dataframe(st.session_state['temp_df1']) 
+	temp_df1 = temp_df2
+#	con10.dataframe(temp_df1) 
 	sbar.success('Filter Applied') 
 	sbar.balloons() 
 
